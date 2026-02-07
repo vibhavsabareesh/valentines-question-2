@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let noClickCount = 0;
     
-    // Yes button click handler
+    // Yes button click 
     yesBtn.addEventListener('click', function() {
-        // Hide first page and show second page
+        //  second page
         page1.classList.add('hidden');
         page2.classList.remove('hidden');
     });
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     noBtn.addEventListener('click', function() {
         noClickCount++;
         
-        // Get current yes button size
+        // yes button size
         const currentPadding = parseFloat(window.getComputedStyle(yesBtn).paddingTop);
         const currentFontSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
         
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         yesBtn.style.padding = `${newPadding}px ${newPadding * 2}px`;
         yesBtn.style.fontSize = `${newFontSize}px`;
         
-        // Optional: Make no button smaller
+        // no button smaller
         const noCurrentPadding = parseFloat(window.getComputedStyle(noBtn).paddingTop);
         const noCurrentFontSize = parseFloat(window.getComputedStyle(noBtn).fontSize);
         
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             noBtn.style.fontSize = `${noCurrentFontSize * 0.95}px`;
         }
         
-        // Optional: Change question text after certain clicks
+        //Change question text after certain clicks
         if (noClickCount === 3) {
              document.getElementById('question').textContent = 'Are you sure?';
          }
         
-        // Optional: Hide no button after many clicks
+        // Hide no button after many clicks
         if (noClickCount >= 5) {
              noBtn.style.display = 'none';
          }
