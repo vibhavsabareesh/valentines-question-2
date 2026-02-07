@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Optional: Change question text after certain clicks
-         if (noClickCount === 3) {
+        if (noClickCount === 3) {
              document.getElementById('question').textContent = 'Are you sure?';
          }
         
-         // Optional: Hide no button after many clicks
-         if (noClickCount >= 5) {
+        // Optional: Hide no button after many clicks
+        if (noClickCount >= 5) {
              noBtn.style.display = 'none';
          }
     });
