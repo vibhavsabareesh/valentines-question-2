@@ -38,15 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
             noBtn.style.fontSize = `${noCurrentFontSize * 0.95}px`;
         }
         
-        // Optional: Change question text after certain clicks
-        // if (noClickCount === 3) {
-        //     document.getElementById('question').textContent = 'Are you sure?';
-        // }
+         Optional: Change question text after certain clicks
+         if (noClickCount === 3) {
+             document.getElementById('question').textContent = 'Are you sure?';
+         }
         
-        // Optional: Hide no button after many clicks
-        // if (noClickCount >= 5) {
-        //     noBtn.style.display = 'none';
-        // }
+         Optional: Hide no button after many clicks
+         if (noClickCount >= 5) {
+             noBtn.style.display = 'none';
+         }
     });
     
 });
